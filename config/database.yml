@@ -5,3 +5,7 @@ development:
 test:
   adapter: postgresql
   database: BWriter_test
+
+production:
+  adapter: postgresql
+  database: BWriter_test
