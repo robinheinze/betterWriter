@@ -1,0 +1,15 @@
+<h1> Welcome back <%= current_user.username %></h1>
+
+<ul>
+  <% @blurts.each do |b| %>
+    <li> <%= b.content %>  |   <em>blurted</em> <%= time_ago_in_words(b.created_at)  %> ago.</li>
+  <% end %>
+</ul>
+
+<%= form_for @blurt do |f| %>
+   <%= f.text_area(:content, :size => "50x10" ) %>
+  <br>
+  <%= f.submit "Blurt!", :class => "btn btn-primary" %>
+<% end %>
+
+

@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: bWriter_development
+
+test:
+  adapter: postgresql
+  database: BWriter_test

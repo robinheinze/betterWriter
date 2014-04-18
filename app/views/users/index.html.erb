@@ -1,0 +1,9 @@
+
+<% if current_user %>
+<%= link_to "Vote", new_upvote_path,  class: 'btn btn-primary btn-lg'%>
+<%= link_to "Blurt", user_path(current_user),  class: 'btn btn-primary btn-lg'%>
+<% else %>
+
+<h2>Welcome to betterBlurt</h2>
+<h4> The worlds largest writing contest with a new winner every day!</h4>
+<% end %>
