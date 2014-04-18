@@ -12,7 +12,8 @@ class UpvotesController < ApplicationController
 
   def index
     @best_blurt = Blurt.best_blurt
-    @vote_quantity = Upvote.where(blurt_id: @best_blurt.id)
+    @blurts = Blurt.blurt_vote_freq
+    @vote_quantity = Upvote.where(blurt_id: @best_blurt.id).length
 
   end
 

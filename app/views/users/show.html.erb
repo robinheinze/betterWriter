@@ -12,4 +12,10 @@
   <%= f.submit "Blurt!", :class => "btn btn-primary" %>
 <% end %>
 
+<br>
+
+<% if current_user.blurts.count > 0 %>
+  <%= link_to "Vote on random Blurts!", new_upvote_path,  class: "btn btn-primary" %>
+<% end %>
+
 

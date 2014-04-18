@@ -1,7 +1,8 @@
 
 <% if current_user %>
-<%= link_to "Vote", new_upvote_path,  class: 'btn btn-primary btn-lg'%>
-<%= link_to "Blurt", user_path(current_user),  class: 'btn btn-primary btn-lg'%>
+<div class="main">
+  <%= link_to "Blurt", user_path(current_user),  class: 'btn btn-primary btn-lg'%>
+</div>
 <% else %>
 
 <h2>Welcome to betterBlurt</h2>

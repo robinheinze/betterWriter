@@ -3,9 +3,13 @@ class Blurt < ActiveRecord::Base
   has_many :upvotes
 
   def self.best_blurt
+    Blurt.find(Blurt.blurt_vote_freq.first.first)
+  end
+
+  def self.blurt_vote_freq
     freq = Hash.new(0)
     Upvote.all.each{|upvote| freq[upvote.blurt_id] += 1}
-    Blurt.find(freq.keys.sort.first)
+    freq.sort_by{|blurt_id, upvotes| upvotes}.reverse
   end
 
 end

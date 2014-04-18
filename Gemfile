@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'devise'
 gem 'paperclip'
 gem 'factory_girl_rails'
+gem 'rails_12factor'
 
 group :development do
   gem 'better_errors'
