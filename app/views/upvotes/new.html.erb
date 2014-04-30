@@ -2,7 +2,7 @@
 
 <div class="left">
   <div class=".col-xs-6">
-    <p><%= @blurt1.content %></p>
+    <p><%= simple_format(@blurt1.content) %></p>
 
     <%=link_to "Up Vote", upvotes_path(:upvote => {blurt_id: @blurt1.id}), method: :post, class: 'btn btn-primary' %>
   </div>
@@ -10,7 +10,7 @@
 
 <div class="left">
   <div class="col-xs-6">
-    <p><%= @blurt2.content %></p>
+    <p><%= simple_format(@blurt2.content) %></p>
 
     <%=link_to "Up Vote", upvotes_path(:upvote => {blurt_id: @blurt2.id}), method: :post, class: 'btn btn-primary' %>
 
