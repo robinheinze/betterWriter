@@ -5,4 +5,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_attached_file :avatar
   has_many :blurts
+
+  def needs_to_blurt?
+    (DateTime.now - self.last_blurt).to_i >= 1
+
+  end
+
+  def last_blurt
+    self.blurts.last.created_at.to_datetime
+  end
 end
