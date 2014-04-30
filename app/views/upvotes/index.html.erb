@@ -8,7 +8,8 @@
 
 <h2> Some more great blurts </h2>
 
-<% @blurts.each do |k,v| %>
-  <p> <%= simple_format(Blurt.find(k).content) %> | by <em> <%= User.find(Blurt.find(k).user_id).username %><p>
-
+<% @blurts.each do |b| %>
+  <p> <%= simple_format(b.content) %> by <em> <%= b.user.username %><p>
+  <p> <%= b.approval %>% approval with <%= b.upvotes.length %> upvotes </p>
+  <hr>
 <% end %>

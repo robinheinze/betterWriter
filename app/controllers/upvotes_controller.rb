@@ -13,7 +13,7 @@ class UpvotesController < ApplicationController
 
   def index
     @best_blurt = Blurt.best_blurt
-    @blurts = Blurt.blurt_vote_freq
+    @blurts = Blurt.order(:approval => :desc)
     @vote_quantity = Upvote.where(blurt_id: @best_blurt.id).length
 
   end
