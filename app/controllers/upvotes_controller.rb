@@ -22,7 +22,7 @@ class UpvotesController < ApplicationController
 
   private
   def vote_params
-    params.require(:upvote).permit(:blurt_id)
+    params.require(:upvote).permit(:blurt_id, :show_id)
   end
 
 end

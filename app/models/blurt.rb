@@ -1,6 +1,7 @@
 class Blurt < ActiveRecord::Base
   belongs_to :user
   has_many :upvotes
+  has_and_belongs_to_many :shows
 
   def self.best_blurt
     Blurt.find(Blurt.blurt_vote_freq.first.first)

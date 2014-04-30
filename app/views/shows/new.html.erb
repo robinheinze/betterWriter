@@ -1,0 +1,18 @@
+<h1> Choose the best! </h1>
+
+<div class="left">
+  <div class=".col-xs-6">
+    <p><%= simple_format(@blurt1.content) %></p>
+
+    <%=link_to "Up Vote", upvotes_path(:upvote => {blurt_id: @blurt1.id, :show_id => @show.id}), method: :post, class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<div class="left">
+  <div class="col-xs-6">
+    <p><%= simple_format(@blurt2.content) %></p>
+
+    <%=link_to "Up Vote", upvotes_path(:upvote => {blurt_id: @blurt2.id, :show_id => @show.id}), method: :post, class: 'btn btn-primary' %>
+
+  </div>
+</div>

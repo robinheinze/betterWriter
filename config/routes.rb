@@ -4,4 +4,5 @@ BWriter::Application.routes.draw do
   resources :users, only: :show
   resources :blurts
   resources :upvotes
+  resources :shows
 end

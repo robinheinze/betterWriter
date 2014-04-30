@@ -1,5 +1,6 @@
 class Upvote < ActiveRecord::Base
   belongs_to :blurt
+  belongs_to :show
   def self.two_blurts
     blurt_count = Blurt.all.length
     arr = []
