@@ -7,6 +7,7 @@ class UpvotesController < ApplicationController
   def create
     @upvote = Upvote.create(vote_params)
     @upvote.update(user_id: current_user.id)
+    @upvote.blurt.update_approval
     redirect_to upvotes_path
   end
 

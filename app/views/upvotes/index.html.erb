@@ -4,6 +4,7 @@
  <h3> <%= simple_format(@best_blurt.content)  %></h3>
  <h4> Congratrulations <%= User.find(@best_blurt.user_id).username %>! </h4>
  <h5> <%= User.find(@best_blurt.user_id).username %> received  <%= @vote_quantity %> votes. </h5>
+ <h5> It's approval rating is <%= @best_blurt.approval %> % </h5>
 
 <h2> Some more great blurts </h2>
 

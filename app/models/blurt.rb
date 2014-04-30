@@ -13,4 +13,9 @@ class Blurt < ActiveRecord::Base
     freq.sort_by{|blurt_id, upvotes| upvotes}.reverse
   end
 
+  def update_approval
+    new_approval = (self.upvotes.length.to_f / self.shows.length.to_f) * 100
+    self.update(approval: new_approval.to_i)
+  end
+
 end

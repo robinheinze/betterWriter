@@ -8,8 +8,17 @@ class User < ActiveRecord::Base
   has_many :shows
 
   def needs_to_blurt?
-    (DateTime.now - self.last_blurt).to_i >= 1
+      result = false
+      if self.ever_blurted?
+        result = (DateTime.now - self.last_blurt).to_i >= 1
+      else
+        result = true
+      end
+      result
+  end
 
+  def ever_blurted?
+    self.blurts.last
   end
 
   def last_blurt

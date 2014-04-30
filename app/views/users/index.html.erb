@@ -1,7 +1,12 @@
 
 <% if current_user %>
-  <% if current_user.needs_to_blurt? %>
+  <% if current_user.needs_to_blurt? && current_user.ever_blurted? %>
     <p> It has been <%= time_ago_in_words(current_user.last_blurt) %> since your last blurt. It is time to blurt again!<p>
+    <div class="main">
+      <%= link_to "Blurt!", user_path(current_user),  class: 'btn btn-primary btn-lg'%>
+    </div>
+  <% elsif !current_user.ever_blurted? %>
+  <p>Welcome to better blurter, where everyone blurts and everyone votes! Click the button below to make your first blurt!</p>
     <div class="main">
       <%= link_to "Blurt!", user_path(current_user),  class: 'btn btn-primary btn-lg'%>
     </div>

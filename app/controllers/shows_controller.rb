@@ -4,12 +4,10 @@ class ShowsController < ApplicationController
     @show = Show.create(:user_id => current_user.id)
     @show.blurts << @blurt1
     @show.blurts << @blurt2
+    @blurt1.update_approval
+    @blurt2.update_approval
   end
 
-  def update
-    @show = Show.find(params[:id])
-    @show.update(show_params)
-  end
 
   private
 
