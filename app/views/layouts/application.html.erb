@@ -2,7 +2,7 @@
 <html>
 <head>
 
-  <title>betterWriter</title>
+  <title>betterBlurter</title>
   <%= favicon_link_tag image_path('favicon.ico') %>
   <%= stylesheet_link_tag    "application", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application",  "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "data-turbolinks-track" => true %>
@@ -10,15 +10,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <div class="navbar navbar-default">
+  <div class="navbar navbar-default">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="<%=root_path%>">betterWriter</a>
+    <a class="navbar-brand" href="<%=root_path%>">betterBlurter</a>
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
@@ -42,6 +41,8 @@
     </ul>
   </div>
   </div>
+  <div class="container">
+
   <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, id: "flash_#{name}" %>
   <% end %>

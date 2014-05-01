@@ -1,0 +1,34 @@
+body {
+  background-color: #27ae60;
+}
+
+.navbar-default {
+  background-color: #95a5a6;
+}
+
+.container {
+  padding: 3%;
+  margin: 3% auto;
+  opacity: 1;
+  background-color: #F9FFEF;
+  border-radius: 10px;
+}
+
+.blurt {
+  border: 2px solid gray;
+  border-radius: 8px;
+  padding: 2%;
+  margin: 2%;
+}
+
+.best-blurt {
+  background-color: #9BDA6A;
+  border-radius: 8px;
+  border: 2px solid gray;
+  padding: 1%;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto 0 auto;
+}

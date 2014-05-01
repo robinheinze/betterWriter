@@ -11,7 +11,9 @@
       <%= link_to "Blurt!", user_path(current_user),  class: 'btn btn-primary btn-lg'%>
     </div>
   <% else %>
-    <%= link_to "Vote on random Blurts!", new_show_path,  class: "btn btn-primary" %>
+  <div class="centered">
+    <%= link_to "Vote on random Blurts!", new_show_path,  class: "btn btn-primary btn-lg" %>
+  </div>
   <% end %>
 
 <% else %>
